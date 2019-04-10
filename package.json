@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -52,7 +52,7 @@
     "typescript": "~3.2.2"
   },
   "engines": {
-    "node": "8.10.0",
+    "node": "v8.10.0",
     "npm": "3.5.2"
   }
 }
