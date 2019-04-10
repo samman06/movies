@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+}
+
+.mv-key{
+    font-size: 1em;
+    color: teal;
+}
+li{
+    margin-top: 7px;
+}
+.movie-title{
+    font-size: 1.2em;
+}
+button{
+    margin-left: 37px;
+}

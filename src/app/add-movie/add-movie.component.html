@@ -1,0 +1,13 @@
+<div class="mb-2">
+  <form [formGroup]="addForm" (ngSubmit)="getMovie()">
+    <div class="form-row align-items-center">
+      <div class="col-sm-7">
+        <label class="sr-only" for="inlineFormInputName">Name</label>
+        <input formControlName="movieTitle" type="text" class="form-control" id="inlineFormInputName" placeholder="Add Movie">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-secondary" [disabled]="!addForm.valid">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

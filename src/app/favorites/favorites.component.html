@@ -1,0 +1,20 @@
+<div class="movie">
+  <div class="row" *ngIf="favMovies.length>0; else loggedOut">
+    <div class="col-md-3">
+      <navbar [movies]="favMovies" [activeMovie]="activeFavMovie" (change)="changeActiveMovie($event)"></navbar>
+    </div>
+    <div class="col-md-4 movieImg">
+      <img *ngIf="activeFavMovie" [src]="activeFavMovie?.Poster">
+    </div> 
+    <div class="col-md-4">
+      <div class="details">
+        <movieDetails (change)="deleteMovies($event)" [activeMovie]="activeFavMovie" [isfavouritePage]="isfavouritePage"></movieDetails>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loggedOut>
+   <div class="alet alert-info">You don not have favourite Movies</div>
+  </ng-template>
+  
+</div>

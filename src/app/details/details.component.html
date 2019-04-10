@@ -1,0 +1,39 @@
+<ul>
+  <li>
+    <span class="mv-key">ImdbID: </span>
+    <span class="text-muted">{{activeMovie?.imdbID}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Title: </span>
+    <span class="movie-title text-muted">{{activeMovie?.Title}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Rating: </span>
+    <span class="text-muted">{{activeMovie?.imdbRating}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Director: </span>
+    <span class="text-muted">{{activeMovie?.Director}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Writer: </span>
+    <span class="text-muted">{{activeMovie?.Writer}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Releazed: </span>
+    <span class="text-muted">{{activeMovie?.Released}}</span>
+  </li>
+  <li>
+    <span class="mv-key">Runtime: </span>
+    <span class="text-muted">{{activeMovie?.Runtime}}</span>
+  </li>
+  <li><span class="mv-key">Actors: </span>
+    <ul>
+      <li class="text-muted" *ngFor="let actor of activeMovie?.Actors">
+        {{actor}}
+      </li>
+    </ul>
+  </li>
+</ul>
+<button *ngIf="!isfavouritePage" type="button" class="btn btn-outline-success btn-block" (click)="addtoFavorite(activeMovie)">+ Add to favorites</button>
+<button *ngIf="isfavouritePage" type="button" class="btn btn-outline-success btn-block" (click)="deleteMovie(activeMovie)">- Delete from favorites</button>

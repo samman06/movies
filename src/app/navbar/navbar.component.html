@@ -1,0 +1,9 @@
+<div  class="scrollable">
+  <ul>
+    <li *ngFor="let movie of movies">
+      <a [class.active]="activeMovie?.imdbID==movie?.imdbID">
+        <button (click)="changeMovie(movie)">{{movie?.Title}}</button>
+      </a>
+    </li>
+  </ul>
+</div>
