@@ -16,7 +16,7 @@ export class OMDBService {
 
   getMovie(movieTitle): Observable<any>{
     this.movieTitle=movieTitle;
-    return this.http.get(`http://www.omdbapi.com/?apikey=${this.API_KEY}&t=${this.movieTitle}`);
+    return this.http.get(`https://www.omdbapi.com/?apikey=${this.API_KEY}&t=${this.movieTitle}`);
   }
 
 }
