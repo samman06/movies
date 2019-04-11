@@ -1,11 +1,12 @@
+
 <div class="movie">
   <div class="row">
     <div class="col-md-3 col-sm-12">
       <add-movie [movies]="movies" [activeMovie]="activeMovie"></add-movie>
       <navbar [movies]="movies" [activeMovie]="activeMovie" (change)="changeActiveMovie($event)"></navbar>
     </div>
-    <div class="col-md-4 col-sm-12 movieImg">
-      <img *ngIf="activeMovie" [src]="activeMovie?.Poster">
+    <div class="col-md-4 col-sm-12 movieImg ">
+      <img *ngIf="activeMovie" [src]="activeMovie?.Poster" class="my-2">
     </div> 
     <div class="col-md-4 col-sm-12">
       <div class="details">

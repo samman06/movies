@@ -4,7 +4,7 @@
       <navbar [movies]="favMovies" [activeMovie]="activeFavMovie" (change)="changeActiveMovie($event)"></navbar>
     </div>
     <div class="col-md-4 movieImg">
-      <img *ngIf="activeFavMovie" [src]="activeFavMovie?.Poster">
+      <img *ngIf="activeFavMovie" [src]="activeFavMovie?.Poster" class="mb-2">
     </div> 
     <div class="col-md-4">
       <div class="details">
